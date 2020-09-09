@@ -16,10 +16,9 @@ use strict;
 
 ## CHANGE THESE SETTINGS FOR YOUR SERVER
 my $dsn = "DBI:mysql:mouseNGS";
-my $username = "root"; ## 
-my $password = "";
-#my $username = "nobody";
-#my $password = "";
+my $username = "user"; ## 
+my $password = "pass";
+
 
 my $dbh = DBI->connect($dsn,$username,$password);
 
