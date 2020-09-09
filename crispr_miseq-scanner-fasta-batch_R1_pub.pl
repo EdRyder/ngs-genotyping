@@ -105,6 +105,7 @@ foreach my $uniq_name(@uniq_name){
            my $hit = 0;
            my $cont = 0;
            #print ( "sequence is ", $sequence, "\n");
+           # The following loop filters out any known sequence contamination from the analysis. For example, if sharing an amplicon sequencing run with another lab and you accidentally use the same index combination
            if ($sequence =~ /GAGCTGTACAAGTAAGGTGTGGGAGGTTTTAGATCGGAAGAGCGGTTCAGCA/){ 
               push (@contamination_array, $sequence);
           #    print OUT "contamination	$sequence	$count\n";
