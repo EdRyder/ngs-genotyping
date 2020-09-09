@@ -1,0 +1,5 @@
+# MYSQL COMMANDS FOR CREATING DATABASE
+
+create database mouseNGS;
+create table miseq_mice (id INT(6) AUTO_INCREMENT PRIMARY KEY, seq_id INT(6), mouse_id varchar(16), plate_id varchar(16), gene_id varchar(32));
+create table miseq_sequences(id INT(6) AUTO_INCREMENT PRIMARY KEY, gene_id varchar(32), match_type varchar(16), match_strand varchar(16), seq_motif text);
