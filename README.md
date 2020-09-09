@@ -8,5 +8,7 @@ mysql_database_commands.txt # create table commands for setting up the database 
 
 # Pre-requesits
 BioPerl (version tested installed as part of Ensembl Perl API package)
+
 MariaDB / MySQL
+
 Perl modules as listed in scripts
