@@ -1,5 +1,5 @@
 #!/usr/bin/perl
-
+# Required modules.
 use Bio::Seq;
 use Bio::Seq::Quality;
 use Bio::SeqIO;
@@ -14,12 +14,10 @@ use strict;
 #
 ###
 
-## CHANGE THESE SETTINGS FOR YOUR SERVER
+## CHANGE THESE SETTINGS FOR YOUR OWN SERVER. 
 my $dsn = "DBI:mysql:mouseNGS";
-my $username = "root"; ## 
-my $password = "";
-#my $username = "nobody";
-#my $password = "";
+my $username = "user"; ## 
+my $password = "pass";
 
 my $dbh = DBI->connect($dsn,$username,$password);
 
@@ -33,7 +31,7 @@ foreach my $files(@files){
    my $name = $samples[0];
    push @name_array, $name;
 }
-my @uniq_name = uniq(@name_array);
+my @uniq_name = uniq(@name_array); # GET THE SAMPLE ID FROM THE FILE NAME. THIS IS USED IN THE DATABASE LOOKUP LATER TO GET THE MOUSE NAME. 
 ##
 
 open (OUT, ">$ARGV[1]");
